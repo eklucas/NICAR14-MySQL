@@ -30,7 +30,7 @@ WHERE subject like '%accel%';
 ALTER TABLE inv ADD liz_sub varchar(255);
 ```
 
-## populate the field with a word, here "accel", that is a marker for the records we're interested in.
+## populate the field with a word, here "accel", that is a marker for the records we're interested in. I'll include only models after the year 2000, which was approximately when throttle linkages became remote controlled -- thanks Robert Benincasa. 
 
 ``` sql
 UPDATE inv SET liz_sub = 'ACCEL' WHERE subject like '%accel%' AND year > 2000;
