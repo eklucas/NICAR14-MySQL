@@ -37,6 +37,14 @@ UPDATE inv SET liz_sub = 'ACCEL' WHERE subject like '%accel%' AND year > 2000;
 ```
 *471 records*
 
+## another example is adding columns for cleaning purposes.
+
+``` sql
+ALTER TABLE inv ADD liz_odate date;
+;
+UPDATE inv SET liz_odate = str_to_date(odate, '%yyyymmdd%')
+```
+
 ## How many recalls resulted from investigations that spanned longer than a year?
 ## demonstrates why a joining recalls and inv on CAMPNO is not ideal in this situation because of how the records are multiplied
 ``` sql
