@@ -42,7 +42,7 @@ UPDATE inv SET liz_sub = 'ACCEL' WHERE subject like '%accel%' AND year > 2000;
 ``` sql
 ALTER TABLE inv ADD liz_odate date;
 ;
-UPDATE inv SET liz_odate = str_to_date(odate, '%yyyymmdd%')
+UPDATE inv SET liz_odate = str_to_date(odate, '%Y%m%d')
 ```
 
 ## How many recalls resulted from investigations that spanned longer than a year?
